@@ -42,7 +42,7 @@ footer{
     background: rgb(77, 77, 77);
     display: flex;
     justify-content: space-between;
-    min-height: 10vh;
+    min-height: 12vh;
 
     height: 12vh;
     align-items: center;
@@ -63,12 +63,13 @@ footer{
     text-decoration: none;
     font-size: 5vh;
     font-weight: bold;
+    margin: 5px;
 }
 
 .nav_linkS{
     display: flex;
     width: 50%;
-    max-width: 40%;
+    max-width: 60%;
 }
 
 .navbar_link{
@@ -113,8 +114,10 @@ footer{
         background: rgb(77, 77, 77);
         position: absolute;
         right: 0px;
-        height: 100%;
-        top: 12vh;
+        height: 5hv;
+        max-width: 100%;
+        width: 100%;
+        top: 11.9vh;
         display: flex;
         flex-direction: column;
         align-items: center;
