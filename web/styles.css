@@ -1,20 +1,151 @@
-body{
-    font-size: 3rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+*{
     box-sizing: border-box;
-    background-image: url("images/background.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
+    margin: 0em;
+    padding: 0em;
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    text-align: center;
 }
 
 
-.header{
-    border: 0rem;
+
+header{
     width: 100%;
-    height: 15%;
-    background-color:rgb(255, 67, 56);
+    height: 2em;
+    background-color:rgb(255, 63, 53);
     color:whitesmoke;
-    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer{
+    bottom: 0;
+    height: 8rem ;
+    width: 100%;
+    background-color:rgb(48, 48, 48);
+    color:whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.main-div{
+    background-image: url("images/background.jpg");
+    padding: 3em 0em;
+    background-position: center;
+}
+
+/*<!-- -->
+<!-- NavBar section-->
+<!-- -->*/
+
+
+.navbar{
+    background: rgb(77, 77, 77);
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+
+    height: 12vh;
+    align-items: center;
+    font-size: 2vh;
+    top: 0%;
+    z-index: 5000;
+}
+
+
+
+.logo{
+    background-color: blueviolet;
+    background-image: linear-gradient(to top,rgb(255, 202, 57),rgb(176, 104, 243));
+    background-size: 100%;
+    -webkit-background-clip: text; /* makes linear gradient on text*/
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
+    text-decoration: none;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.nav_linkS{
+    display: flex;
+    width: 50%;
+    max-width: 40%;
+}
+
+.navbar_link{
+    color: aliceblue;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* add both on original object and on hover to create an smoother effect*/
+}
+
+.navbar_link:hover{
+    color: rgb(230, 130, 255);
+    transition: all 0.3s ease; /* add both on original object and on hover to create an smoother effect*/
+}
+
+.burguer {
+    display: none;
+    cursor: pointer;
+}
+
+.burguer div{
+    width: 25px;
+    height: 3px;
+    background-color: aliceblue;
+    margin: 5px;
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .logo{
+        position: absolute;
+        left: 5px;
+    }
+    .nav_linkS{
+        background: rgb(77, 77, 77);
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        top: 12vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    } 
+    .navbar_link{
+        right: 0px;
+        display: flex;
+        opacity: 0;
+    }
+
+    .burguer{
+        display: block;
+        position: absolute;
+        right: 40px;
+    }
+     
+}
+
+.nav-active{
+    transform: translateX(0%);   
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
