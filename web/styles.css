@@ -9,7 +9,6 @@
 
 
 
-
 .main-div{
     background-image: url("images/background.jpg");
     background-position: center;
@@ -23,16 +22,11 @@
 .navbar{
     background: rgb(77, 77, 77);
     display: flex;
-    justify-content: space-around;
-    min-height: 5rem;
+    justify-content: space-between;
 
     height: 6rem;
-    width: 100%;
-    margin: auto;
     align-items: center;
     font-size: 2rem;
-    top: 0%;
-    z-index: 5000;
     border-radius: 0 0 2vh 2vh;
 }
 
@@ -54,8 +48,6 @@
     display: flex;
     width: 50%;
     max-width: 60%;
-    flex: 1;
-    margin-right: 2rem;
 }
 
 .navbar_link{
@@ -89,24 +81,23 @@
 }
 
 @media screen and (max-width:768px){
-    body{
+    body,html{
         overflow-x: hidden;
     }
     .logo{
-        font-size: 5vh;
+        font-size: 2.5rem;
         z-index: 5000;
     }
     .nav_linkS{
         background: rgb(77, 77, 77);
         position: absolute;
-        right: -2rem;
-        height: 10rem;
-        max-width: 100%;
-        width: 100%;
+        right: 0px;
+        height: 15rem;
         top: 4.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 50%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 500;
@@ -126,7 +117,8 @@
 }
 
 .nav-active{
-    transform: translateX(0%);   
+    transform: translateX(0%);  
+    visibility: visible; 
 }
 
 @keyframes navLinkFade{
@@ -143,10 +135,11 @@
 /*---------------------------*/
 /*----- Footer section ------*/
 /*---------------------------*/
+
+
 .footer{
     background-color:rgb(77, 77, 77);
     display: flex;
-    position: absolute;
     bottom: 0;
     height: 4rem ;
     width: 100%;
@@ -156,7 +149,7 @@
 }
 
 .footer-container{
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -166,7 +159,7 @@
     justify-content: center;
 }
 .footer-row h4{
-    font-size: 2rem;
+    font-size: 2em;
     display: inline-block;
     position: relative;
     text-decoration: none;
@@ -178,6 +171,7 @@
     -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
 }
 
+
 .footer-row h4::after{ /*Underline of Contacts*/
     content: "";
     position: absolute;
@@ -186,7 +180,7 @@
     width: 60%;
     height: 0.1em;
     background-color: rgb(243, 232, 217);
-    transition: 1s ease;
+    transition: 0.5s ease;
     border-radius: 5px;
 }
 
@@ -199,7 +193,7 @@
     border-radius: 50%;
     width: 40px;
     color: rgb(243, 232, 217);
-    margin-right: 1em;
+    margin-right: 10px;
     text-align: center;
     line-height: 40px;
 }
@@ -208,4 +202,15 @@
     background-color: rgb(139, 139, 139);
     border-radius: 50%;
     width: 40px;
+}
+
+@media screen and (max-width:768px){
+    .footer{
+        height: 8vh;
+    }
+
+    .footer-row .social-links a{
+        width: 30px;
+        line-height: 30px;
+    }
 }

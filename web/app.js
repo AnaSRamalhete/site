@@ -1,3 +1,6 @@
+// -------------
+// Function to show navigation links when the screen is smaller
+// -------------
 const navSlide = () => {
     const burguer = document.querySelector('.burguer');
     const nav = document.querySelector('.nav_linkS');
