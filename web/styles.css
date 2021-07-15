@@ -7,11 +7,15 @@
     text-align: center;
 }
 
-
+/*-------------------------------*/
+/*------ Background section -----*/
+/*-------------------------------*/
 
 .main-div{
     background-image: url("images/background.jpg");
     background-position: center;
+    background-size: contain;
+    height: 100%;
 }
 
 /*---------------------------*/
@@ -34,7 +38,7 @@
 
 .logo{
     background-color: blueviolet;
-    background-image: linear-gradient(to top,rgb(255, 202, 57),rgb(176, 104, 243));
+    background-image: linear-gradient(to top,rgb(254,67,55),rgb(255,189,237));
     background-size: 100%;
     -webkit-background-clip: text; /* makes linear gradient on text*/
     -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
@@ -97,7 +101,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50%;
+        width: 60%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
         z-index: 500;
@@ -140,32 +144,33 @@
 .footer{
     background-color:rgb(77, 77, 77);
     display: flex;
-    bottom: 0;
-    height: 4rem ;
+    height: 4em ;
     width: 100%;
     color:rgb(243, 232, 217);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 2vh 2vh 0 0;
+
+    /*position: absolute;
+    bottom: 0;*/
 }
 
-.footer-container{
-    width: 100%;
-    margin: auto;
-}
+
 
 .footer-row{
+    width: 100%;
+    margin: auto;
     display: flex;
-    flex: 3;
-    justify-content: center;
 }
+
 .footer-row h4{
+    position: relative;
+
     font-size: 2em;
     display: inline-block;
-    position: relative;
     text-decoration: none;
     flex: 1;
 
-    background-image: linear-gradient(to top,rgb(255, 202, 57),rgb(176, 104, 243));
+    background-image: linear-gradient(to top,rgb(254,67,55),rgb(255,189,237));
     background-size: 100%;
     -webkit-background-clip: text; /* makes linear gradient on text*/
     -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
@@ -175,9 +180,10 @@
 .footer-row h4::after{ /*Underline of Contacts*/
     content: "";
     position: absolute;
+    display: inline-block;
     top: 110%;
-    left: 0;
-    width: 60%;
+    left: 50%;
+    width: 2em;
     height: 0.1em;
     background-color: rgb(243, 232, 217);
     transition: 0.5s ease;
@@ -186,6 +192,10 @@
 
 .footer-row h4:hover::after{ /*Move underline on hover*/
     transform: translateX(3.5rem);
+}
+
+.footer-row .social-links{
+    flex: 1;
 }
 .footer-row .social-links a{
     display: inline-block;
@@ -206,11 +216,73 @@
 
 @media screen and (max-width:768px){
     .footer{
-        height: 8vh;
+        height: 5em;
+    }
+
+    .footer h4{
+        font-size: 2.1em;
     }
 
     .footer-row .social-links a{
-        width: 30px;
-        line-height: 30px;
+        width: 2em;
+        line-height: 2em;
+    }
+
+    .footer-row .social-links a:hover{
+        width: 2em;
+    }
+}
+
+/* --------------------------- */
+/* ----- Central Section ----- */
+/* --------------------------- */
+
+.main-section{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    /*background-color:rgba(152, 175, 216, 0.2);*/
+}
+
+.profile-pic{
+    align-items: center;
+}
+.profile-pic img{
+    max-height: 20rem;
+
+    -webkit-border-radius: 50%; /* Mask for profile image */
+    border-radius: 50%; 
+}
+
+.main-section-container{
+    justify-content: left;
+    align-items: center;
+    display: flex;
+}
+.main-section-container-text{
+    background: rgb(255,189,237);
+    margin: 4%;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px rgba(65, 65, 65, 0.3);
+}
+
+@media screen and (max-width:768px){
+    .main-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+
+    .profile-pic img{
+        max-height: 12em;
+    }
+
+    .main-section-container{
+        justify-content: center;
+        width: 70%;
     }
 }
