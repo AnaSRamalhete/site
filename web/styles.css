@@ -283,29 +283,40 @@ nav{
 }
 .main-section-container-text{
     background: rgb(255,189,237);
+    padding: 20px;
     height:max-content;
     border-radius: 10px;
     box-shadow: 0 5px 30px rgba(65, 65, 65, 0.3);
     text-align: center;
+    margin: 0 15px;
 }
 
 @media screen and (max-width:768px){
     .main-section{
+        height: auto;
         display: flex;
         flex-direction: column;
-        align-content:center;
-
-        background-color: aqua;
-        width: 100%;
     } 
+    .profile-pic{
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items:flex-start;
+    }
 
     .profile-pic img{
         max-height: 12em;
     }
 
     .main-section-container{
+        display: flex;
+        margin: 20px auto;
         justify-content: center;
         width: 70%;
+    }
+    .main-section-container-text{
+        width: 90%;
+        padding: 2%;
     }
 }
 
