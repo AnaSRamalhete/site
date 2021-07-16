@@ -12,7 +12,6 @@ const navSlide = () => {
 
         //Animate Links
         navlinks.forEach((link,index) =>{
-            console.log(index); // to show in console the result of index
             if (link.style.animation){
                 link.style.animation = ``;
             }
@@ -30,6 +29,35 @@ const app = ()=>{
 }
 
 app();
+
+
+// -------------
+// Function to show the nav-link that corresponds to the current section that is being displayed
+// -------------
+
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.navbar_link');
+
+window.addEventListener('scroll', ()=>{
+    let currentSection= '';
+
+    sections.forEach(section =>{
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if(pageYOffset >= (sectionTop-sectionHeight/3)){
+            currentSection=section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link =>{
+        link.classList.remove('nav-link-active');
+        if(link.id === currentSection){
+            link.classList.add('nav-link-active');
+        }
+    });
+});
+
 
 
 // -----------------------------------------

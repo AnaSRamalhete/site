@@ -22,10 +22,10 @@
         <nav class="navbar">
             <div class="logo">Ana's Space</div>
             <ul class="nav_linkS">
-                <li class="navbar_link">About Me</li>
-                <li class="navbar_link">Education</li>
-                <li class="navbar_link">Volunteer</li>
-                <li class="navbar_link">Extra Activities</li>
+                <li class="navbar_link nav-link-active" id="about">About Me</li>
+                <li class="navbar_link" id="education">Education</li>
+                <li class="navbar_link" id="volunteer">Volunteer</li>
+                <li class="navbar_link" id="activities">Extra Activities</li>
             </ul>
             <div class="burguer">
                 <div class="burguer-line1"></div>
@@ -39,7 +39,7 @@
         <!-- Central Section -->
         <!-- -->
 
-        <div class="main-section">
+        <section class="main-section" id='about'>
 
             <div class="profile-pic">
                 <img src="images/profile.jpg" alt="">
@@ -56,7 +56,11 @@
                     </h2>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <section class="section-education" id="education">
+            <h1>hello</h1>
+        </section>
 
         
 
@@ -69,9 +73,9 @@
                 <h4>Contacts</h4>
                 <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100010159722157" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="mailto: anasramalhete@gmail.com"><i class="fa fa-envelope"></i></a>
-                        <a href="https://www.instagram.com/anasramalhete/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/ana-sofia-ramalhete-870a43100/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto: anasramalhete@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/anasramalhete/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ana-sofia-ramalhete-870a43100/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
         </footer>
