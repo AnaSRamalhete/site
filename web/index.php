@@ -4,9 +4,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Ana's Space</title>
+    <!-- My styles css file -->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0;">
+    <!-- For contact links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
@@ -76,6 +78,7 @@
                         <a href="mailto: anasramalhete@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
                         <a href="https://www.instagram.com/anasramalhete/" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/ana-sofia-ramalhete-870a43100/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/AnaSRamalhete" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </footer>
