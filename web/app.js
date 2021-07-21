@@ -9,6 +9,7 @@ const navSlide = () => {
     // Toggle Nav
     burguer.addEventListener('click', ()=>{
         nav.classList.toggle('nav-active');
+        burguer.classList.toggle('change');
 
         //Animate Links
         navlinks.forEach((link,index) =>{

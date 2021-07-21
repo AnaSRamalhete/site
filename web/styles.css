@@ -86,9 +86,30 @@ nav{
 
 .burguer div{
     width: 25px;
-    height: 3px;
+    height: 2px;
     background-color: rgb(243, 232, 217);
     margin: 5px;
+}
+
+.burguer-line1, .burguer-line2, .burguer-line3{
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .burguer-line1 {
+    -webkit-transform: rotate(-45deg) translate(0px, 9px) ;
+    transform: rotate(-45deg) translate(0px, 9px) ; 
+}
+
+/* Fade out the second bar */
+.change .burguer-line2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .burguer-line3 {
+    -webkit-transform: rotate(45deg) translate(0px, -9px)  ;
+    transform: rotate(45deg) translate(0px, -9px) ; 
 }
 
 @media screen and (max-width:768px){
