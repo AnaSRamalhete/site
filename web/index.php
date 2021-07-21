@@ -24,10 +24,10 @@
         <nav class="navbar">
             <div class="logo">Ana's Space</div>
             <ul class="nav_linkS">
-                <li class="navbar_link nav-link-active" id="about">About Me</li>
-                <li class="navbar_link" id="education">Education</li>
-                <li class="navbar_link" id="volunteer">Volunteer</li>
-                <li class="navbar_link" id="activities">Extra Activities</li>
+                <a class="navbar_link nav-link-active" id="about" href="#sectionAbout">About Me</a>
+                <a class="navbar_link" id="education" href="#sectionEducation">Education</a>
+                <a class="navbar_link" id="volunteer">Volunteer</a>
+                <a class="navbar_link" id="activities">Extra Activities</a>
             </ul>
             <div class="burguer">
                 <div class="burguer-line1"></div>
@@ -41,6 +41,7 @@
         <!-- Central Section -->
         <!-- -->
 
+        <a name="sectionAbout" ></a>
         <section class="main-section" id='about'>
 
             <div class="profile-pic">
@@ -60,6 +61,7 @@
             </div>
         </section>
 
+        <a name="sectionEducation" ></a>
         <section class="section-education" id="education">
             <h1>hello</h1>
         </section>
