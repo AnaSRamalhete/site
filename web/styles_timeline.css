@@ -1,0 +1,115 @@
+/* ---------------------------- */
+/* ----- TimeLine Section ----- */
+/* ---------------------------- */
+
+.section-education{
+    display: flex;
+    height: fit-content;
+    /*background-color: rgb(56, 56, 56);*/
+    padding: 50px 50px;
+}
+
+
+.timeline-list{
+    max-width: 100em;
+    padding: 2%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-list::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 95%;
+    background-color:rgb(80, 80, 80);
+    left: calc(50% - 3px);
+    border-radius: 10px;
+}
+
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative; /*To then adjust the dot's position to the item*/
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+    text-align: left;
+}
+
+.timeline-item-dot{
+    height: 24px;
+    width: 24px;
+    background-color: rgb(254,67,55);
+    background-image: linear-gradient(to top,rgb(254,67,55),rgb(80, 80, 80));
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 12px);
+    top: -2px;
+}
+
+.timeline-item-date{
+    font-size: 2rem;
+    color: rgb(80, 80, 80);
+    margin: -8px 0 5px; /*top right and left*/
+    font-weight: bold;
+
+    background-image: linear-gradient(to top,rgb(254,67,55),rgb(80, 80, 80));
+    background-size: 100%;
+    -webkit-background-clip: text; /* makes linear gradient on text*/
+    -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
+}
+
+.timeline-item-content{
+    background-color: rgb(65, 65, 65);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timeline-item-content h3{
+    font-size: 1.4rem;
+    color: rgb(253, 249, 243);
+    margin: 0 0 15px;
+}
+
+.timeline-item-content p{
+    font-size: 1.3rem;
+    color: rgb(243, 232, 217);
+}
+
+@media screen and (max-width:768px){
+    .timeline-item:nth-child(odd){
+        padding-right: 0;
+        padding-left: 1em;
+        text-align: left;
+    }
+
+    .timeline-item:nth-child(even){
+        padding-left: 1em;
+    }
+
+    .timeline-list::before{
+        left: 50%;
+        z-index: 0;
+    }
+
+    .timeline-item-dot{
+        left: calc(50% - 10px);
+        position: absolute;
+    }
+
+    .timeline-item-date{
+        margin-left: 1em;
+        left: calc(50% - 1em);
+    }
+}

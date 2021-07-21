@@ -4,8 +4,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Ana's Space</title>
-    <!-- My styles css file -->
+    <!-- My styles css files -->
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles_timeline.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0;">
     <!-- For contact links -->
@@ -63,7 +64,35 @@
 
         <a name="sectionEducation" ></a>
         <section class="section-education" id="education">
-            <h1>hello</h1>
+            <div class="timeline-list">
+
+                <div class="timeline-item">
+                    <div class="timeline-item-dot"></div>
+                    <div class="timeline-item-date">2015</div>
+                    <div class="timeline-item-content">
+                        <h3>Biological Enginnering</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item-dot"></div>
+                    <div class="timeline-item-date">2016</div>
+                    <div class="timeline-item-content">
+                        <h3>Physics Enginnering</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-item-dot"></div>
+                    <div class="timeline-item-date">2017</div>
+                    <div class="timeline-item-content">
+                        <h3>Biological Enginnering</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         
