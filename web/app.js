@@ -108,7 +108,7 @@ mainContainer.addEventListener("mouseenter", (e)=>{
 // ------- Timeline Scroll Animation ------
 // ----------------------------------------
 
-const timelineItem = document.querySelectorAll('.timeline-item-content');
+const timelineItem = document.querySelectorAll('.timeline-item');
 gsap.registerPlugin(ScrollTrigger);
 timelineItem.forEach(item =>{
 
@@ -117,8 +117,7 @@ timelineItem.forEach(item =>{
         opacity:0,
         scrollTrigger: {
           trigger: item,
-          toggleActions: "restart none none reverse",
-          start:"bottom bottom"
+          toggleActions: "restart none none reverse"
         }
       });
 }); 
