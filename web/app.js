@@ -77,6 +77,7 @@ tl.from(mainContainer, 0.8, {opacity:0, scale:0, ease:"in"}, "-=0.5");
 
 
 
+
 // ----------------------------------------
 // ---- Hoover Animations -----------------
 // ----------------------------------------
@@ -102,4 +103,23 @@ mainContainer.addEventListener("mouseleave", (e)=>{
 mainContainer.addEventListener("mouseenter", (e)=>{
     mainContainerText.style.transition = 'all 0.5s ease';
 });
+
+// ----------------------------------------
+// ------- Timeline Scroll Animation ------
+// ----------------------------------------
+
+const timelineItem = document.querySelectorAll('.timeline-item-content');
+gsap.registerPlugin(ScrollTrigger);
+timelineItem.forEach(item =>{
+
+    gsap.from(item, {
+        y:["100%"],
+        opacity:0,
+        scrollTrigger: {
+          trigger: item,
+          toggleActions: "restart none none reverse",
+          start:"bottom bottom"
+        }
+      });
+}); 
 
