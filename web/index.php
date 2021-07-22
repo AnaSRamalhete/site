@@ -26,9 +26,9 @@
             <div class="logo">Ana's Space</div>
             <ul class="nav_linkS">
                 <a class="navbar_link nav-link-active" id="about" href="#sectionAbout">About Me</a>
-                <a class="navbar_link" id="education" href="#sectionEducation">Education</a>
+                <a class="navbar_link" id="timeline" href="#sectionTimeline">Career's Path</a>
                 <a class="navbar_link" id="volunteer">Volunteer</a>
-                <a class="navbar_link" id="activities">Extra Activities</a>
+                <a class="navbar_link" id="projects">Projects</a>
             </ul>
             <div class="burguer">
                 <div class="burguer-line1"></div>
@@ -39,7 +39,7 @@
 
 
         <!-- -->
-        <!-- Central Section -->
+        <!-- About Me Section -->
         <!-- -->
 
         <a name="sectionAbout" ></a>
@@ -62,8 +62,12 @@
             </div>
         </section>
 
-        <a name="sectionEducation" ></a>
-        <section class="section-education" id="education">
+        <!-- -->
+        <!-- Education Section -->
+        <!-- -->
+
+        <a name="sectionTimeline" ></a>
+        <section class="section-education" id="timeline">
             <div class="timeline-list">
 
                 <div class="timeline-item">

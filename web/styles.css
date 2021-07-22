@@ -156,6 +156,7 @@ nav{
 
 .nav-link-active{
     font-weight: bold;
+    font-size: larger;
     font-size: large;
     color: rgb(243, 232, 217);
     text-decoration: none;
