@@ -26,7 +26,7 @@ const navSlide = () => {
 }
 
 const app = ()=>{
-    navSlide();
+    navSlide(); 
 }
 
 app();
