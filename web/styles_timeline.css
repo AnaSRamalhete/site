@@ -90,12 +90,14 @@
 @media screen and (max-width:768px){
     .timeline-item:nth-child(odd){
         padding-right: 0;
-        padding-left: 1em;
-        text-align: left;
+        padding-left: 0;
+        text-align: center;
     }
 
     .timeline-item:nth-child(even){
-        padding-left: 1em;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
     }
 
     .timeline-list::before{
@@ -109,7 +111,6 @@
     }
 
     .timeline-item-date{
-        margin-left: 1em;
-        left: calc(50% - 1em);
+        margin-left: 4em;
     }
 }
