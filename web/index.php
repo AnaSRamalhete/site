@@ -20,12 +20,13 @@
 
 
 <body>
-    <!-- -->
-    <!-- Animation Section -->
-    <!-- -->
-    <canvas class="animation-canvas"></canvas>
+    
     
     <div class="main-div">
+        <!-- -->
+        <!-- Animation Section -->
+        <!-- -->
+        <canvas class="animation-canvas"></canvas>
 
         <!-- -->
         <!-- NavBar section-->
