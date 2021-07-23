@@ -20,6 +20,11 @@
 
 
 <body>
+    <!-- -->
+    <!-- Animation Section -->
+    <!-- -->
+    <canvas class="animation-canvas"></canvas>
+    
     <div class="main-div">
 
         <!-- -->
@@ -65,6 +70,7 @@
                 </div>
             </div>
         </section>
+        
 
         <!-- -->
         <!-- Education Section -->
@@ -129,6 +135,8 @@
     <!-- -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="app.js"></script>
+    <script src="background.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 
 .section-education{
     display: flex;
-    height: fit-content;
+    height: fit-content(100%);
     /*background-color: rgb(56, 56, 56);*/
     padding: 50px 50px;
 }

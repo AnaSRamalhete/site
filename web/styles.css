@@ -13,7 +13,7 @@
 
 .main-div{
     /*background-image: url("images/background.jpg");*/
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     background-position: center;
     background-size: contain;
     height: 100%;
@@ -71,7 +71,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
+    width: fit-content(100%);
     padding: 0.2em;
     height: 3rem;
     font-size: 1.2rem;
@@ -279,7 +279,7 @@ nav{
     align-content: center;
     justify-content: center;
     width: 100%;
-    height: fit-content;
+    height: fit-content(100%);
     margin-top: 2em;
     margin-bottom: 2em;
     /*background-color:rgba(152, 175, 216, 0.2);*/
@@ -342,4 +342,16 @@ nav{
         padding: 2%;
     }
 }
+
+
+
+ /* Animation  */
+
+ .animation-canvas{
+     position: fixed;
+     top: 0;
+     left: 0;
+     height: 100vh;
+     z-index: -9999;
+ }
 
