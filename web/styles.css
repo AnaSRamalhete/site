@@ -2,8 +2,9 @@
     box-sizing: border-box;
     margin: 0em;
     padding: 0em;
-    font-family:Arial, Helvetica, sans-serif;
+    /* font-family:Arial, Helvetica, sans-serif; */
     scroll-behavior: smooth;
+    font-family: 'Cantarell', sans-serif;
 }
 
 /*-------------------------------*/
@@ -11,7 +12,8 @@
 /*-------------------------------*/
 
 .main-div{
-    background-image: url("images/background.jpg");
+    /*background-image: url("images/background.jpg");*/
+    background-color: rgb(255, 255, 255);
     background-position: center;
     background-size: contain;
     height: 100%;
@@ -64,14 +66,15 @@ nav{
 .navbar_link{
     color: rgb(243, 232, 217);
     text-decoration: none;
-    text-decoration: none;
+    margin: auto;
 
     display: flex;
     align-items: center;
-    justify-content: left;
-    width: 10rem;
+    justify-content: center;
+    width: fit-content;
+    padding: 0.2em;
     height: 3rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease; /* add both on original object and on hover to create an smoother effect*/
 }
 
@@ -89,7 +92,7 @@ nav{
     width: 25px;
     height: 2px;
     background-color: rgb(243, 232, 217);
-    margin: 5px;
+    margin-top: 5px;
 }
 
 .burguer-line1, .burguer-line2, .burguer-line3{
@@ -98,8 +101,8 @@ nav{
 
 /* Rotate first bar */
 .change .burguer-line1 {
-    -webkit-transform: rotate(-45deg) translate(0px, 9px) ;
-    transform: rotate(-45deg) translate(0px, 9px) ; 
+    -webkit-transform: rotate(-45deg) translate(0px, 10px) ;
+    transform: rotate(-45deg) translate(0px, 10px) ; 
 }
 
 /* Fade out the second bar */
@@ -109,8 +112,8 @@ nav{
 
 /* Rotate last bar */
 .change .burguer-line3 {
-    -webkit-transform: rotate(45deg) translate(0px, -9px)  ;
-    transform: rotate(45deg) translate(0px, -9px) ; 
+    -webkit-transform: rotate(45deg) translate(0px, -10px)  ;
+    transform: rotate(45deg) translate(0px, -10px) ; 
 }
 
 @media screen and (max-width:768px){
@@ -156,9 +159,8 @@ nav{
 
 .nav-link-active{
     font-weight: bold;
-    font-size: larger;
-    font-size: large;
-    color: rgb(243, 232, 217);
+    font-size: 1.3rem;
+    color: rgb(230, 130, 255);
     text-decoration: none;
 }
 
@@ -187,9 +189,6 @@ nav{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 2vh 2vh 0 0;
     text-align: center;
-
-    /*position: absolute;
-    bottom: 0;*/
 }
 
 
@@ -299,17 +298,18 @@ nav{
 }
 
 .main-section-container{
-    /*background: rgb(117, 117, 117);*/
     justify-content: left;
     display: flex;
     margin: 150px 0px;
 }
 .main-section-container-text{
-    background: rgb(255,189,237);
-    padding: 20px;
+    /* background: rgb(255,189,237); */
+    background: rgba(255, 255, 255,0.2);
+    backdrop-filter: blur(40px);
+    padding: 1em;
     height:max-content;
     border-radius: 10px;
-    box-shadow: 0 5px 30px rgba(65, 65, 65, 0.3);
+    box-shadow: 0 5px 30px rgba(65, 65, 65, 0.1);
     text-align: center;
     margin: 0 15px;
 }
