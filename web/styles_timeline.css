@@ -61,12 +61,12 @@
 }
 
 .timeline-item-date{
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: rgb(80, 80, 80);
     margin: -8px 0 5px; /*top right and left*/
     font-weight:1000;
 
-    background-image: linear-gradient(to top,rgb(139, 139, 139),rgb(80, 80, 80));
+    background-image: linear-gradient(to top,rgb(49, 49, 49),rgb(117, 117, 117));
     background-size: 100%;
     -webkit-background-clip: text; /* makes linear gradient on text*/
     -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/

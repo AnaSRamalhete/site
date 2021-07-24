@@ -80,8 +80,9 @@
 
 		const elapsedTime = clock.getElapsedTime();
 
-		particleMesh.rotation.x = -mouseY * (elapsedTime * 0.000004);
-		particleMesh.rotation.y = -mouseX * (elapsedTime * 0.000004);
+		particleMesh.rotation.x = -mouseY * ( 0.00004);
+		particleMesh.rotation.y = -mouseX * ( 0.00004);
+		particleMesh.rotation.z = elapsedTime%1000 * 0.01;
 
 		//render the scene
 		renderer.render( scene, camera );
