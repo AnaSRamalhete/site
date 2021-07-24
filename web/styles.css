@@ -7,10 +7,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/*-------------------------------*/
-/*------ Background section -----*/
-/*-------------------------------*/
-
 .main-div{
     /*background-image: url("images/background.jpg");*/
     /* background-color: rgb(255, 255, 255); */
@@ -354,10 +350,12 @@ nav{
 }
 
 
+/*-------------------------------*/
+/*------ Background section -----*/
+/*-------------------------------*/
+/* ---------- Animation --------*/
 
- /* Animation  */
-
- .animation-canvas{
+.animation-canvas{
     position: fixed;
     top: 0;
     left: 0;
@@ -366,6 +364,7 @@ nav{
     height: 100vh;
     display: block;
     background-color: white;
-    background-image: linear-gradient(to top,rgba(254,67,55,0.8),rgba(255,189,237,0.7));
- }
+    /* background-image: linear-gradient(to top,rgba(254,67,55,0.8),rgba(255,189,237,0.7)); */
+    background-image: linear-gradient(to top,rgba(175, 83, 76, 0.8),rgba(209, 169, 199, 0.7));
+}
 
