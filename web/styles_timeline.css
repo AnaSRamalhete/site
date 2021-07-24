@@ -24,7 +24,8 @@
     position: absolute;
     width: 6px;
     height: 95%;
-    background-color:rgb(80, 80, 80);
+    /* background-color:rgb(80, 80, 80); */
+    background-color:white;
     left: calc(50% - 3px);
     border-radius: 10px;
 }
@@ -51,7 +52,8 @@
     height: 24px;
     width: 24px;
     background-color: rgb(254,67,55);
-    background-image: linear-gradient(to top,rgb(254,67,55),rgb(80, 80, 80));
+    /* background-image: linear-gradient(to top,rgb(254,67,55),rgb(80, 80, 80)); */
+    background-image: linear-gradient(to top,rgb(145, 145, 145),rgb(80, 80, 80));
     border-radius: 50%;
     position: absolute;
     left: calc(50% - 12px);
@@ -59,32 +61,37 @@
 }
 
 .timeline-item-date{
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: rgb(80, 80, 80);
     margin: -8px 0 5px; /*top right and left*/
-    font-weight: bold;
+    font-weight:1000;
 
-    background-image: linear-gradient(to top,rgb(254,67,55),rgb(80, 80, 80));
+    background-image: linear-gradient(to top,rgb(139, 139, 139),rgb(80, 80, 80));
     background-size: 100%;
     -webkit-background-clip: text; /* makes linear gradient on text*/
     -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
 }
 
 .timeline-item-content{
-    background-color: rgb(65, 65, 65);
+    /* background-color: rgb(65, 65, 65); */
+    background: rgba(255, 255, 255,0.2);
+    backdrop-filter: blur(40px);
+    box-shadow: 0 5px 30px rgba(65, 65, 65, 0.1);
     padding: 20px;
     border-radius: 10px;
 }
 
 .timeline-item-content h3{
     font-size: 1.4rem;
-    color: rgb(253, 249, 243);
+    /* color: rgb(253, 249, 243); */
+    color: rgb(77, 77, 77);
     margin: 0 0 15px;
 }
 
 .timeline-item-content p{
     font-size: 1.3rem;
-    color: rgb(243, 232, 217);
+    /* color: rgb(243, 232, 217); */
+    color: rgb(77, 77, 77);
 }
 
 @media screen and (max-width:768px){
