@@ -98,7 +98,7 @@ nav{
 /* Rotate first bar */
 .change .burguer-line1 {
     -webkit-transform: rotate(-45deg) translate(0px, 10px) ;
-    transform: rotate(-45deg) translate(0px, 10px) ; 
+    transform: rotate(-45deg) translate(0px, 10px) ;
 }
 
 /* Fade out the second bar */
@@ -109,7 +109,7 @@ nav{
 /* Rotate last bar */
 .change .burguer-line3 {
     -webkit-transform: rotate(45deg) translate(0px, -10px)  ;
-    transform: rotate(45deg) translate(0px, -10px) ; 
+    transform: rotate(45deg) translate(0px, -10px) ;
 }
 
 @media screen and (max-width:768px){
@@ -142,7 +142,7 @@ nav{
         transition: transform 0.5s ease-in;
         z-index: 500;
         border-radius: 10px;
-    } 
+    }
     .navbar_link{
         right: 0px;
         display: flex;
@@ -154,12 +154,12 @@ nav{
         display: block;
         flex: 0.5;
     }
-     
+
 }
 
 .nav-active{
-    transform: translateX(0%);  
-    visibility: visible; 
+    transform: translateX(0%);
+    visibility: visible;
 }
 
 .nav-link-active{
@@ -244,10 +244,14 @@ nav{
     background-color: rgb(65, 65, 65);
     border-radius: 50%;
     width: 40px;
-    color: rgb(243, 232, 217);
+    height: 40px;
     margin-right: 10px;
-    text-align: center;
-    line-height: 40px;
+    color: rgb(243, 232, 217);
+    align-items: center;
+    /* text-align: center;  */
+}
+.footer-row .social-links a i{
+    margin-top: 10px;
 }
 
 .footer-row .social-links a:hover{
@@ -265,13 +269,18 @@ nav{
         font-size: 2.1em;
     }
 
+    .footer-row .social-links{
+        flex: 3;
+    }
+
     .footer-row .social-links a{
         width: 2em;
-        line-height: 2em;
+        height: 2em;
     }
 
     .footer-row .social-links a:hover{
         width: 2em;
+        height: 2em;
     }
 }
 
@@ -299,7 +308,7 @@ nav{
     max-height: 20em;
 
     -webkit-border-radius: 50%; /* Mask for profile image */
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .main-section-container{
@@ -325,7 +334,7 @@ nav{
         height: auto;
         display: flex;
         flex-direction: column;
-    } 
+    }
     .profile-pic{
         margin-top: 0;
         display: flex;

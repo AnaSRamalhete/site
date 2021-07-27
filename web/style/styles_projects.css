@@ -1,0 +1,22 @@
+.section-projects{
+    padding: 10vw;
+    padding-top: 4vw;
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* align-content: space-between; */
+    justify-content: space-between;
+    row-gap: 2vw;
+}
+
+.project-slide{
+    color: rgb(77, 77, 77);
+    font-size: 1em;
+    padding: 1em;
+    width: 20em;
+    height: 20em;
+    text-align: center;
+    background-color: aquamarine;
+}
+

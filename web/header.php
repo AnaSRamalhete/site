@@ -8,9 +8,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Ana's Space</title>
+
     <!-- My styles css files -->
     <link rel="stylesheet" type="text/css" href="style/styles.css">
     <link rel="stylesheet" type="text/css" href="style/styles_timeline.css">
+    <link rel="stylesheet" type="text/css" href="style/styles_projects.css">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0;">
     <!-- For contact links -->
@@ -29,6 +32,7 @@
     
     
     <div class="main-div">
+
         <!-- -->
         <!-- Animation Section -->
         <!-- -->
@@ -41,9 +45,9 @@
         <nav class="navbar">
             <div class="logo">Ana's Space</div>
             <ul class="nav_linkS">
-                <a class="navbar_link nav-link-active" id="about" href="#sectionAbout">About Me</a>
-                <a class="navbar_link" id="timeline" href="#sectionTimeline">Career's Path</a>
-                <a class="navbar_link" id="projects">Projects</a>
+                <a class="navbar_link nav-link-active" id="about" href="index.php#sectionAbout">About Me</a>
+                <a class="navbar_link" id="timeline" href="index.php#sectionTimeline">Career's Path</a>
+                <a class="navbar_link" id="projects" href="projects.php#sectionProjects">Projects</a>
             </ul>
             <div class="burguer">
                 <div class="burguer-line1"></div>
@@ -51,4 +55,3 @@
                 <div class="burguer-line3"></div>
             </div>
         </nav>
-
