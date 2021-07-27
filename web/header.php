@@ -43,7 +43,6 @@
             <ul class="nav_linkS">
                 <a class="navbar_link nav-link-active" id="about" href="#sectionAbout">About Me</a>
                 <a class="navbar_link" id="timeline" href="#sectionTimeline">Career's Path</a>
-                <a class="navbar_link" id="volunteer">Volunteer</a>
                 <a class="navbar_link" id="projects">Projects</a>
             </ul>
             <div class="burguer">

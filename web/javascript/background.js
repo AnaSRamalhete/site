@@ -43,6 +43,7 @@
 		particlesGeo.setAttribute('position', new THREE.BufferAttribute(positionArray, 3));
 
 		// Material of stars
+
 		const circle = new THREE.TextureLoader().load( 'images/circle.png' );
 		const material = new THREE.PointsMaterial({
 			size: 0.1, 
@@ -50,10 +51,11 @@
 			transparent: true,  
 			alphaTest: 0.5
 		});
-		
 
 		// Meshing material with geometry
 		particleMesh = new THREE.Points(particlesGeo, material)
+
+		// Adding object to scene
 		scene.add(particleMesh)
 	}
 
