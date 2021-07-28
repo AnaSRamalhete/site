@@ -36,19 +36,19 @@
         <!-- -->
         <!-- Animation Section -->
         <!-- -->
-        <!-- <canvas class="animation-canvas"></canvas> -->
-        <div id="particles-js"></div>
+        <!-- Using THREE.js <canvas class="animation-canvas"></canvas> -->
+        <div id="particles-js"></div> <!-- Using particles.js  -->
 
         <!-- -->
         <!-- NavBar section-->
         <!-- -->
 
-        <nav class="navbar">
+        <nav class="navbar" id="mainNav">
             <div class="logo">Ana's Space</div>
             <ul class="nav_linkS">
                 <a class="navbar_link nav-link-active" id="about" href="index.php#sectionAbout">About Me</a>
                 <a class="navbar_link" id="timeline" href="index.php#sectionTimeline">Career's Path</a>
-                <a class="navbar_link" id="projects" href="projects.php#sectionProjects">Projects</a>
+                <a class="navbar_link" id="projects" href="projects.php#sectionProjects">Projects</a> 
             </ul>
             <div class="burguer">
                 <div class="burguer-line1"></div>

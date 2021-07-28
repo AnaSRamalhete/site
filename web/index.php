@@ -36,32 +36,30 @@
 <section class="section-education" id="timeline">
     <div class="timeline-list">
 
-        <div class="timeline-item">
+        <!-- <div class="timeline-item">
             <div class="timeline-item-dot"></div>
             <div class="timeline-item-date">2015</div>
             <div class="timeline-item-content">
                 <h3>Biological Enginnering</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
-        </div>
+        </div> -->
 
-        <div class="timeline-item">
-            <div class="timeline-item-dot"></div>
-            <div class="timeline-item-date">2016</div>
-            <div class="timeline-item-content">
-                <h3>Physics Enginnering</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-item-dot"></div>
-            <div class="timeline-item-date">2017</div>
-            <div class="timeline-item-content">
-                <h3>Biological Enginnering</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-        </div>
+        <?php
+            while ($row = pg_fetch_row($resultTimeline)) {
+            ?>
+                <div class="timeline-item">
+                    <div class="timeline-item-dot"></div>
+                    <div class="timeline-item-date"><?php echo $row[0]; ?></div>
+                    <div class="timeline-item-content">
+                        <h3><?php echo $row[1]; ?></h3>
+                        <p><?php echo $row[2]; ?> </p>
+                    </div>
+                </div>
+            <?php
+            }
+        ?>
+        
     </div>
 </section>
 

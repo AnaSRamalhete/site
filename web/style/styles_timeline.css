@@ -28,6 +28,7 @@
     background-color:white;
     left: calc(50% - 3px);
     border-radius: 10px;
+    opacity: 0.4;
 }
 
 .timeline-item{
@@ -68,7 +69,7 @@
 
     background-image: linear-gradient(to top,rgb(49, 49, 49),rgb(117, 117, 117));
     background-size: 100%;
-    -webkit-background-clip: text; /* makes linear gradient on text*/
+    -webkit-background-clip: text; /* makes linear gradient on text */
     -webkit-text-fill-color: transparent; /* /makes linear gradient on text*/
 }
 
@@ -119,5 +120,13 @@
 
     .timeline-item-date{
         margin-left: 4em;
+    }
+
+    .timeline-item-content h3{
+        font-size: 1.1rem;
+    }
+    
+    .timeline-item-content p{
+        font-size: 1rem;
     }
 }
