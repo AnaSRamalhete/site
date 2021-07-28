@@ -36,7 +36,8 @@
         <!-- -->
         <!-- Animation Section -->
         <!-- -->
-        <canvas class="animation-canvas"></canvas>
+        <!-- <canvas class="animation-canvas"></canvas> -->
+        <div id="particles-js"></div>
 
         <!-- -->
         <!-- NavBar section-->
