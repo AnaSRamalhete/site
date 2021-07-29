@@ -10,9 +10,11 @@
 .main-div{
     /*background-image: url("images/background.jpg");*/
     /* background-color: rgb(255, 255, 255); */
-    background-position: center;
+    /* position: -webkit-sticky;
+    position: sticky; */
+    /* background-position: center; */
     background-size: contain;
-    height: 100%;
+    /* height: 100%; */
 }
 
 /*---------------------------*/
@@ -115,9 +117,9 @@ nav{
 @media screen and (max-width:768px){
     body,html{
         overflow-x: hidden;
+        height: 100vh;
     }
     nav{
-        /*position: -webkit-sticky;*/
         position: -webkit-sticky;
         position: sticky;
         z-index:999;
@@ -126,7 +128,7 @@ nav{
 
     .logo{
         font-size: 2.5rem;
-        z-index: 5000;
+        /* z-index: 5000; */
     }
     .nav_linkS{
         background: rgb(77, 77, 77);
@@ -140,7 +142,7 @@ nav{
         width: 60%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-        z-index: 500;
+        /* z-index: 500; */
         border-radius: 10px;
     }
     .navbar_link{
