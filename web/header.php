@@ -44,7 +44,7 @@
         <!-- -->
 
         <nav class="navbar" id="mainNav">
-            <div class="logo">Ana's Space</div>
+            <a href="/ist425052"><div class="logo">Ana's Space</div></a>
             <ul class="nav_linkS">
                 <a class="navbar_link nav-link-active" id="about" href="index.php#sectionAbout">About Me</a>
                 <a class="navbar_link" id="timeline" href="index.php#sectionTimeline">Career's Path</a>

@@ -29,6 +29,10 @@ nav{
     left:0; top: 0; width: 100%;
 }
 
+nav a{
+    text-decoration: none;
+}
+
 .navbar{
     background: rgba(77, 77, 77,0.9);
     display: flex;
@@ -133,7 +137,7 @@ nav{
     .nav_linkS{
         background: rgb(77, 77, 77);
         position: absolute;
-        right: 0px;
+        right: 0;
         height: 15rem;
         top: 4.5rem;
         display: flex;
@@ -154,7 +158,6 @@ nav{
 
     .burguer{
         display: block;
-        flex: 0.5;
     }
 
 }
@@ -250,7 +253,6 @@ nav{
     margin-right: 10px;
     color: rgb(243, 232, 217);
     align-items: center;
-    /* text-align: center;  */
 }
 .footer-row .social-links a i{
     margin-top: 10px;
@@ -299,17 +301,14 @@ nav{
     height: fit-content(100%);
     margin-top: 2em;
     margin-bottom: 2em;
-    /*background-color:rgba(152, 175, 216, 0.2);*/
 }
 
 .profile-pic{
-    /*background: rgb(24, 24, 24);*/
     align-items: center;
     margin: 0 15px;
 }
 .profile-pic img{
     max-height: 20em;
-
     -webkit-border-radius: 50%; /* Mask for profile image */
     border-radius: 50%;
 }

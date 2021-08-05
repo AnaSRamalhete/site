@@ -5,8 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    /* align-content: space-between; */
-    justify-content: space-between;
+    justify-content: space-around;
     row-gap: 2vw;
 }
 
@@ -14,9 +13,57 @@
     color: rgb(77, 77, 77);
     font-size: 1em;
     padding: 1em;
-    width: 20em;
-    height: 20em;
+    width: 20vw;
+    height: 20vw;
     text-align: center;
-    background-color: aquamarine;
+    background: rgba(255, 255, 255,0.2);
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+
+    transition: color 0.5s linear; /* vendorless fallback */
+    -o-transition: color 0.5s linear; /* opera */
+    -ms-transition: color 0.5s linear; /* IE 10 */
+    -moz-transition: color 0.5s linear; /* Firefox */
+    -webkit-transition: color 0.5s linear; /*safari and chrome */
 }
 
+.project-slide:hover {
+    width: 25vw;
+    /* height: 25vw; */
+    transition: all 0.2s ease-in;
+}
+.project-slide:not(:hover){
+    transition: all 0.2s ease-in;
+}
+
+
+@media screen and (max-width:1500px){
+
+    .project-slide{
+        font-size: 1em;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .project-slide:hover {
+        width: 35vw;
+        /* height: 25vw; */
+        transition: all 0.2s ease-in;
+    }
+}
+
+@media screen and (max-width:1000px){
+
+    .project-slide{
+        font-size: 1em;
+        width: 70vw;
+        height: 20em;
+    }
+
+    .project-slide:hover {
+        width: 75vw;
+        /* height: 25vw; */
+        transition: all 0.2s ease-in;
+    }
+}
