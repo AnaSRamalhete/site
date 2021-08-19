@@ -1,7 +1,12 @@
+a{
+    text-decoration: none;
+}
+
 .section-projects{
-    padding: 10vw;
+    padding: 5vw;
     padding-top: 4vw;
     width: 98vw;
+    min-height: 79.7vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
