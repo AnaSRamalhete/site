@@ -1,3 +1,4 @@
+/* -------------- NavBar Section ----------------  */
 .nav-bar{
     height: fit-content;
     width: 100%;
@@ -27,6 +28,8 @@
 .nav-bar a {
     text-decoration: none;
 }
+
+/* -------------- Main Section ----------------  */
 
 .main-hero{
     height: 95vh;
@@ -61,6 +64,8 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
     margin: 10px;
+    border-radius: 5px;
+    border: solid 2px darkgray;
   }
   
   .slider:hover {
@@ -72,13 +77,13 @@
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: #5a87ac;
     cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #04AA6D;
+    background: #7482a0;
     cursor: pointer;
   }
