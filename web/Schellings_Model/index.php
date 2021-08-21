@@ -32,11 +32,30 @@
     <div class="main-hero">
 
         <div class="var-section">
+
             <div class="slideContainer">
                 <h3>% of Population 1</h3>
                 <input type="range" min="1" max="100" value="50" id="pPopulation1" class="slider">
             </div>
+
+            <div class="slideContainer">
+                <h3>% of Empty Spaces</h3>
+                <input type="range" min="1" max="100" value="50" id="emptySpace" class="slider">
+            </div>
+
+            <div class="slideContainer">
+                <h3>Min nº of desired equal Neighbours</h3>
+                <input type="range" min="1" max="8" value="1" id="minSameNeighbours" class="slider">
+            </div>
+
+            <div class="slideContainer">
+                <h3>Max nº of desired equal Neighbours</h3>
+                <input type="range" min="1" max="8" value="1" id="maxSameNeighbours" class="slider">
+            </div>
+            
         </div>
+
+        
 
         <div class="grid-section">
             Hello
