@@ -7,6 +7,7 @@
 
     <!-- My styles css files -->
     <link rel="stylesheet" type="text/css" href="../style/styles.css">
+    <link rel="stylesheet" type="text/css" href="SM_styles.css">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0;">
@@ -19,17 +20,26 @@
 </head>
 <body>
     <div class="nav-bar">
-
+        <h1>Schelling's Model of Segregation</h1>
+        <a href="https://github.com/AnaSRamalhete/SchellingModelAdaptation" target="_blank">
+            <div class="code-btn">
+                <h2>Code</h2>
+                <i class="fab fa-github"></i>
+            </div>
+        </a>
     </div>
 
     <div class="main-hero">
 
         <div class="var-section">
-            
+            <div class="slideContainer">
+                <h3>% of Population 1</h3>
+                <input type="range" min="1" max="100" value="50" id="pPopulation1" class="slider">
+            </div>
         </div>
 
         <div class="grid-section">
-            
+            Hello
         </div>
     </div>
 </body>

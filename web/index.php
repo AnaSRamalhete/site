@@ -21,7 +21,7 @@
             </h1>
 
             <h2 class="main-text">
-                I'm a Physics Enginnering student at Técnico Lisboa.
+                I'm an Engineering Physics student at Técnico Lisboa.
             </h2>
         </div>
     </div>
