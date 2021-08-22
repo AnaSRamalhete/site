@@ -17,6 +17,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    
+    <!-- ------------ -->
+    <!-- Java Scripts -->
+    <!-- ------------ -->
+    
+    <!-- p5*js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 
@@ -65,16 +72,11 @@
         <!-- Grid Section -->
         <!-- ----------------- -->
 
-        <div class="grid-section" id="p5Container"> 
+        <div class="grid-section" id="p5Container">
+            <script src="app.js"></script>
         </div>
     </div>
 
-    <!-- ------------ -->
-    <!-- Java Scripts -->
-    <!-- ------------ -->
-
-    <!-- p5*js  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="app.js"></script>
+    
 </body>
 </html>
