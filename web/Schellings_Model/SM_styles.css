@@ -33,7 +33,7 @@
 /* -------------- Main Section ----------------  */
 
 .main-hero{
-    height: 95vh;
+    height: 90vh;
     width: 100%;
     display: flex;
     background-color: aliceblue;
@@ -45,11 +45,10 @@
 
 .grid-section{
     flex: 2;
-    display: grid;
-    grid-gap: 10px;
-    border: solid 2px darkgray;
-    grid-template-columns: auto auto auto;
+    display: flex;
     padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* -------------- Slider Section ----------------  */
