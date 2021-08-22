@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 </head>
+
+
 <body>
     <div class="nav-bar">
         <h1>Schelling's Model of Segregation</h1>
@@ -58,7 +60,15 @@
         
 
         <div class="grid-section">
-            Hello
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>  
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>  
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>  
         </div>
     </div>
 </body>
