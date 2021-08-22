@@ -33,6 +33,10 @@
 
     <div class="main-hero">
 
+        <!-- ----------------- -->
+        <!-- Variables Section -->
+        <!-- ----------------- -->
+
         <div class="var-section">
 
             <div class="slideContainer">
@@ -57,19 +61,20 @@
             
         </div>
 
-        
+        <!-- ----------------- -->
+        <!-- Grid Section -->
+        <!-- ----------------- -->
 
-        <div class="grid-section">
-            <div class="grid-item">1</div>
-            <div class="grid-item">2</div>
-            <div class="grid-item">3</div>  
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>  
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item">9</div>  
+        <div class="grid-section" id="p5Container"> 
         </div>
     </div>
+
+    <!-- ------------ -->
+    <!-- Java Scripts -->
+    <!-- ------------ -->
+
+    <!-- p5*js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
 </body>
 </html>
