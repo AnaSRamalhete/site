@@ -53,7 +53,7 @@
 
             <div class="slideContainer">
                 <h3>% of Empty Spaces</h3>
-                <input type="range" min="1" max="100" value="50" id="emptySpace" class="slider">
+                <input type="range" min="1" max="100" value="10" id="emptySpace" class="slider">
             </div>
 
             <div class="slideContainer">
@@ -77,10 +77,11 @@
         <!-- ----------------- -->
 
         <div class="grid-section" id="p5Container">
-            <script src="grid_object.js"></script>
-            <script src="app.js"></script>
         </div>
     </div>
+
+    <script src="app.js"></script>
+    <script src="grid_object.js"></script>
 
     
 </body>
