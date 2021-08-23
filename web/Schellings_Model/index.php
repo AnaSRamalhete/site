@@ -66,6 +66,10 @@
                 <input type="range" min="1" max="8" value="1" id="maxSameNeighbours" class="slider">
             </div>
             
+
+            <div class="btn-refresh" id="btnRefresh">
+                <h3>Refresh</h3>
+            </div>
         </div>
 
         <!-- ----------------- -->
@@ -73,6 +77,7 @@
         <!-- ----------------- -->
 
         <div class="grid-section" id="p5Container">
+            <script src="grid_object.js"></script>
             <script src="app.js"></script>
         </div>
     </div>

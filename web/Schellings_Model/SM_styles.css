@@ -4,13 +4,13 @@
     width: 100%;
     padding: 15px;
     display: flex;
-    background-color: rgb(109, 109, 109);
+    background-color: rgb(133, 132, 132);
     justify-content: space-around;
     align-items: center;
 }
 
 .code-btn{
-    background-color: aliceblue;
+    background-color: cornsilk;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@
     height: 90vh;
     width: 100%;
     display: flex;
-    background-color: aliceblue;
+    background-color: cornsilk;
     
 }
 .var-section{
@@ -90,6 +90,22 @@
     width: 25px;
     height: 25px;
     background: #7482a0;
+    cursor: pointer;
+  }
+
+  .btn-refresh{
+    display: flex;
+    background-color: #5a87ac;
+    height: 50px;
+    margin:auto;
+    border-radius: 5px;
+    width: 200px;
+    color: cornsilk;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .btn-refresh:hover{
     cursor: pointer;
   }
 
