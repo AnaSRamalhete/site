@@ -10,7 +10,7 @@
 }
 
 .code-btn{
-    background-color: cornsilk;
+    background-color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@
     height: 90vh;
     width: 100%;
     display: flex;
-    background-color: cornsilk;
+    background-color: white;
     
 }
 .var-section{
@@ -100,9 +100,11 @@
     margin:auto;
     border-radius: 5px;
     width: 200px;
-    color: cornsilk;
+    color: white;
     justify-content: center;
     align-items: center;  
+    border: solid 2px rgb(69, 87, 126);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   }
 
   .btn-refresh:hover{
