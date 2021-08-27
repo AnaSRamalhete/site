@@ -65,9 +65,6 @@ class Grid{
     constructor(rows, cols, w, vMinimum, vMaximum, fractionAdaptive, pEmpty, pPop1, p){
         this.rows = rows;
         this.cols = cols;
-        console.log("this cols and rows")
-        console.log(this.rows)
-        console.log(this.cols)
         this.population = new Array(this.cols);
         this.canvas = p
 
@@ -77,12 +74,9 @@ class Grid{
 
         for (var i = 0; i < this.cols; i++) {
             for (var j = 0; j < this.rows; j++) {
-                console.log("inside forfor")
-                console.log(i, j)
                 var randNum = Math.random();
                 if(randNum<pEmpty){
                     this.population[i][j] = new GridCell(i, j, w, true, p);
-                    console.log("created an empty space: ", randNum, pEmpty, randNum<pEmpty)
                 }
                 else{
                     if(Math.random()<pPop1){
@@ -95,7 +89,6 @@ class Grid{
                         }
                         
                         this.population[i][j] = new Agent(i, j, w, 1, thld, adapt, p);
-                        console.log("created an agent 1")
                     }
                     else{
                         var thld = getRandomInt(vMinimum, vMaximum);
@@ -107,7 +100,6 @@ class Grid{
                         }
                         
                         this.population[i][j] = new Agent(i, j, w, 2, thld, adapt, p);
-                        console.log("created an agent 2")
                     }
                     
                 }
@@ -119,9 +111,6 @@ class Grid{
     refresh(rows, cols, w, vMinimum, vMaximum, fractionAdaptive, pEmpty, pPop1){
         this.rows = rows;
         this.cols = cols;
-        console.log("this cols and rows")
-        console.log(this.rows)
-        console.log(this.cols)
         this.population = new Array(this.cols);
 
         for (var i = 0; i < this.population.length; i++) {
@@ -130,12 +119,9 @@ class Grid{
 
         for (var i = 0; i < this.cols; i++) {
             for (var j = 0; j < this.rows; j++) {
-                console.log("inside forfor")
-                console.log(i, j)
                 var randNum = Math.random();
                 if(randNum<pEmpty){
                     this.population[i][j] = new GridCell(i, j, w, true, this.canvas);
-                    console.log("created an empty space: ", randNum, pEmpty, randNum<pEmpty)
                 }
                 else{
                     if(Math.random()<pPop1){
@@ -148,7 +134,6 @@ class Grid{
                         }
                         
                         this.population[i][j] = new Agent(i, j, w, 1, thld, adapt, this.canvas);
-                        console.log("created an agent 1")
                     }
                     else{
                         var thld = getRandomInt(vMinimum, vMaximum);
@@ -160,15 +145,62 @@ class Grid{
                         }
                         
                         this.population[i][j] = new Agent(i, j, w, 2, thld, adapt, this.canvas);
-                        console.log("created an agent 2")
                     }
                     
                 }
                 
             }
         }
+    }
 
-        // this.canvas.draw();
+    getEmptyPlaces(){
+        var emptyPlaces = [];
+
+        for (var i = 0; i < this.cols; i++) {
+            for (var j = 0; j < this.rows; j++) {
+                if( !(this.population[i][j] instanceof Agent) ){
+                    emptyPlaces.push(this.population[i][j]);
+                }
+            }
+        }
+
+        return emptyPlaces;
+    }
+
+    countNeighbours(i,j){
+        let neighbours=[];
+
+        let startPosX   = (i > 0) ? i-1 : i;
+        let endPosX     = (i < this.cols-1) ? i+1 : i;
+
+        let startPosY   = (j > 0) ? j-1 : j;
+        let endPosY     = (j < this.rows-1) ? j+1 : j;
+
+        console.log(startPosX, endPosX)
+        console.log(startPosY, endPosY)
+
+        for (var colNum=startPosX; colNum<=endPosX; colNum++) {
+            for (var rowNum=startPosY; rowNum<=endPosY; rowNum++) {
+                // All the neighbors will be grid.population[rowNum][colNum]
+                if (this.population[colNum][rowNum] instanceof Agent && !(colNum==i && rowNum==j)){
+                    neighbours.push(this.population[colNum][rowNum]);
+                    console.log("hello", colNum, rowNum);
+                }
+            }
+        }
+        var TotalNeighbours = neighbours.length;
+        var SameNeighbours = 0;
+        var OpositeNeighbours = 0;
+
+        for(var index = 0; index < neighbours.length; index++){
+            if((neighbours[index] instanceof Agent) && (neighbours[index].Type == this.population[i][j].Type)){
+                SameNeighbours++;   
+            }
+        }
+
+        OpositeNeighbours = TotalNeighbours - SameNeighbours;
+        
+        return [TotalNeighbours, SameNeighbours, OpositeNeighbours];
     }
 }
   

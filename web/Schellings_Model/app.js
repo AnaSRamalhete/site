@@ -26,6 +26,7 @@ let sketch = function(p) {
     }
 
     p.windowResized = function(){
+        p.clear();
         sketchWidth = document.getElementById("p5Container").offsetWidth * 0.9;
         sketchHeight = document.getElementById("p5Container").offsetHeight * 0.9;
         p.resizeCanvas(sketchWidth + 1, sketchHeight + 1);
