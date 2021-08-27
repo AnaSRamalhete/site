@@ -202,5 +202,23 @@ class Grid{
         
         return [TotalNeighbours, SameNeighbours, OpositeNeighbours];
     }
+
+    updateTimesMinoMajo(i,j){
+        TotalNeighbours , SameNeighbours, OpositeNeighbours = this.countNeighbours(i, j);
+
+        if(this.population[i][j] instanceof Agent && TotalNeighbours>0){
+            this.population[i][j].adaptation();
+            percentagem = SameNeighbours/TotalNeighbours;
+
+            if(percentagem >= 0.5){
+                this.population[i][j].tMinority = 0
+                this.population[i][j].tMajority += 1
+            } else if(percentagem < 0.5){
+                this.population[i][j].tMinority += 1
+                this.population[i][j].tMajority = 0
+            }
+        }
+        
+    }
 }
   
