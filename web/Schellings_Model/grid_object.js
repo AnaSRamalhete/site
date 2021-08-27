@@ -242,8 +242,10 @@ class Grid{
         this.population[i][j].changePosition(iEmptyCell, jEmptyCell);
         this.population[iEmptyCell][iEmptyCell].changePosition(i, j); 
 
-        this.population[iEmptyCell][iEmptyCell] = this.population[i][j];
-        this.population[i][j] = new GridCell(i, j, this.population[i][j].w, true, this.canvas);
+        // this.population[iEmptyCell][iEmptyCell] = this.population[i][j];
+        // this.population[i][j] = new GridCell(i, j, this.population[i][j].w, true, this.canvas);
+
+        this.updateTimesMinoMajo(i,j);
     }
 
     show(){
@@ -265,6 +267,18 @@ class Grid{
             }
         }
         return nUnhappy/this.totalPopulation;
+    }
+
+    simStep(){
+        for (var i=0; i<this.cols; i++){
+            for(var j=0; j<this.rows; j++){
+                var neighbors = this.countNeighbours(i, j);
+                if( neighbors[1] < this.population[i][j].threshold){
+                    this.replacePosition(i,j);
+                }
+            }
+        }
+        this.canvas.redraw();
     }
 }
   

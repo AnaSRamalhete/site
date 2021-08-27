@@ -1,7 +1,7 @@
 // Variables to use on Schellings model 
 
-const cols=20;
-const rows=20;
+const cols=50;
+const rows=50;
 
 var pPopulation1 = document.getElementById("pPopulation1").value/100;   
 var pEmpty = document.getElementById("emptySpace").value/100;   
@@ -48,10 +48,9 @@ let sketch = function(p) {
         w = Math.min(widthSquare, heigthSquare);
 
         grid.show();
-
-        // if(grid.PercetageunHappy()>0.02){
-
-        // }
+        if(grid.PercetageunHappy()>0.02){
+            grid.simStep();
+        }
     }
 };
 
