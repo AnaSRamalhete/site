@@ -23,10 +23,18 @@ class GridCell {
         this.canvas.fill(255);
         this.canvas.rect(this.x, this.y, this.w, this.w);
     }
+
     resize(new_w){
         this.x = this.i * new_w;
         this.y = this.j * new_w;
         this.w = new_w;
+    }
+
+    changePosition(newi, newj){
+        this.i = newi;
+        this.j = newj;
+        this.x = newi * w;
+        this.y = newj * w;
     }
 }
 
@@ -66,7 +74,8 @@ class Grid{
         this.rows = rows;
         this.cols = cols;
         this.population = new Array(this.cols);
-        this.canvas = p
+        this.canvas = p;
+        this.totalPopulation = 0;
 
         for (var i = 0; i < this.population.length; i++) {
             this.population[i] = new Array(this.rows);
@@ -79,6 +88,9 @@ class Grid{
                     this.population[i][j] = new GridCell(i, j, w, true, p);
                 }
                 else{
+
+                    this.totalPopulation+=1;
+
                     if(Math.random()<pPop1){
                         var thld = getRandomInt(vMinimum, vMaximum);
                         if(Math.random()<fractionAdaptive){
@@ -176,15 +188,11 @@ class Grid{
         let startPosY   = (j > 0) ? j-1 : j;
         let endPosY     = (j < this.rows-1) ? j+1 : j;
 
-        console.log(startPosX, endPosX)
-        console.log(startPosY, endPosY)
-
         for (var colNum=startPosX; colNum<=endPosX; colNum++) {
             for (var rowNum=startPosY; rowNum<=endPosY; rowNum++) {
                 // All the neighbors will be grid.population[rowNum][colNum]
                 if (this.population[colNum][rowNum] instanceof Agent && !(colNum==i && rowNum==j)){
                     neighbours.push(this.population[colNum][rowNum]);
-                    console.log("hello", colNum, rowNum);
                 }
             }
         }
@@ -204,11 +212,11 @@ class Grid{
     }
 
     updateTimesMinoMajo(i,j){
-        TotalNeighbours , SameNeighbours, OpositeNeighbours = this.countNeighbours(i, j);
+        let TotalNeighbours , SameNeighbours, OpositeNeighbours = this.countNeighbours(i, j);
 
         if(this.population[i][j] instanceof Agent && TotalNeighbours>0){
             this.population[i][j].adaptation();
-            percentagem = SameNeighbours/TotalNeighbours;
+            var percentagem = SameNeighbours/TotalNeighbours;
 
             if(percentagem >= 0.5){
                 this.population[i][j].tMinority = 0
@@ -217,8 +225,46 @@ class Grid{
                 this.population[i][j].tMinority += 1
                 this.population[i][j].tMajority = 0
             }
-        }
+        }  
+    }
+
+    replacePosition(i,j){
+        let emptyCells = this.getEmptyPlaces();
+        /**
+        * Returns a random number between min (inclusive) and max (exclusive)
+        */
+        var random_emptyCell = Math.floor(Math.random(emptyCells.length)*(emptyCells.length - 0) + 0);
+        // console.log(emptyCells, random_emptyCell);
         
+        var iEmptyCell = emptyCells[random_emptyCell].i;
+        var jEmptyCell = emptyCells[random_emptyCell].j;
+        
+        this.population[i][j].changePosition(iEmptyCell, jEmptyCell);
+        this.population[iEmptyCell][iEmptyCell].changePosition(i, j); 
+
+        this.population[iEmptyCell][iEmptyCell] = this.population[i][j];
+        this.population[i][j] = new GridCell(i, j, this.population[i][j].w, true, this.canvas);
+    }
+
+    show(){
+        for (var i=0; i<this.cols; i++){
+            for(var j=0; j<this.rows; j++){
+                this.population[i][j].show();
+            }
+        }
+    }
+
+    PercetageunHappy(){
+        var nUnhappy=0; 
+
+        for (var i=0; i<this.cols; i++){
+            for(var j=0; j<this.rows; j++){
+                if(this.countNeighbours(i, j)[1] < this.population[i][j].threshold){
+                    nUnhappy+=1
+                } 
+            }
+        }
+        return nUnhappy/this.totalPopulation;
     }
 }
   

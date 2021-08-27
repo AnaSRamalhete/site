@@ -47,11 +47,11 @@ let sketch = function(p) {
         heigthSquare = sketchHeight/rows;
         w = Math.min(widthSquare, heigthSquare);
 
-        for (var i=0; i<cols; i++){
-            for(var j=0; j<rows; j++){
-                grid.population[i][j].show();
-            }
-        }
+        grid.show();
+
+        // if(grid.PercetageunHappy()>0.02){
+
+        // }
     }
 };
 
