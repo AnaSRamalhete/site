@@ -58,12 +58,12 @@
 
             <div class="slideContainer">
                 <h3>Min nº of desired equal Neighbours</h3>
-                <input type="range" min="1" max="8" value="1" id="minSameNeighbours" class="slider">
+                <input type="range" min="1" max="8" value="3" id="minSameNeighbours" class="slider">
             </div>
 
             <div class="slideContainer">
                 <h3>Max nº of desired equal Neighbours</h3>
-                <input type="range" min="1" max="8" value="1" id="maxSameNeighbours" class="slider">
+                <input type="range" min="1" max="8" value="8" id="maxSameNeighbours" class="slider">
             </div>
             
 

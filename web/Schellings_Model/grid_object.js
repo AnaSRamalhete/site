@@ -1,27 +1,48 @@
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (max - min + 1) + min); 
+    //The maximum is inclusive and the minimum is inclusive
 }
   
 
 
-class GridCell {
-    constructor(i, j, w, empty, p) {
+// class GridCell {
+//     constructor(i, j, w, empty, p) {
+//         this.i = i;
+//         this.j = j;
+//         this.x = i * w;
+//         this.y = j * w;
+//         this.w = w;
+
+//         this.empty = empty;
+//         this.canvas = p;
+//     }
+
+//     show(){
+//         this.canvas.stroke(0);
+//         this.canvas.fill(255);
+//         this.canvas.rect(this.x, this.y, this.w, this.w);
+//     }
+
+    
+// }
+
+class Agent {
+    constructor(i, j, w, type, threshold, adapt, p) {
         this.i = i;
         this.j = j;
         this.x = i * w;
         this.y = j * w;
         this.w = w;
-
-        this.empty = empty;
+        
         this.canvas = p;
-    }
 
-    show(){
-        this.canvas.stroke(0);
-        this.canvas.fill(255);
-        this.canvas.rect(this.x, this.y, this.w, this.w);
+        this.Type = type;
+        this.threshold = threshold;
+        this.tMinority = 0
+        this.tMajority = 0
+        this.adapt = adapt
     }
 
     resize(new_w){
@@ -36,18 +57,6 @@ class GridCell {
         this.x = newi * w;
         this.y = newj * w;
     }
-}
-
-class Agent extends GridCell {
-    constructor(i, j, w, type, threshold, adapt, p) {
-      super(i, j, w, false, p);
-
-      this.Type = type;
-      this.threshold = threshold;
-      this.tMinority = 0
-      this.tMajority = 0
-      this.adapt = adapt
-    }
     
     adaptation() {
         if (this.tMinority >= this.adapt && this.threshold >1 && this.adapt!=0){
@@ -59,13 +68,26 @@ class Agent extends GridCell {
 
     show(){
         this.canvas.stroke(0);
-        if (this.Type === 1){
-            this.canvas.fill(255,0,0);
-        }
-        else {
-            this.canvas.fill(0,0,255);
+
+        switch(this.Type){
+            case 0:
+                this.canvas.fill(255);
+                break;
+            case 1:
+                this.canvas.fill(255,0,0);
+                break;
+            case 2:
+                this.canvas.fill(0,0,255);
+                break;
         }
         this.canvas.rect(this.x, this.y, this.w, this.w);
+    }
+
+    clone(){
+        let newclone = new Agent(this.i, this.j, this.w, this.Type, this.threshold, this.adapt, this.canvas);
+        newclone.tMinority = this.tMinority;
+        newclone.tMajority = this.tMajority;
+        return newclone;
     }
 }
 
@@ -73,6 +95,7 @@ class Grid{
     constructor(rows, cols, w, vMinimum, vMaximum, fractionAdaptive, pEmpty, pPop1, p){
         this.rows = rows;
         this.cols = cols;
+        this.w = w;
         this.population = new Array(this.cols);
         this.canvas = p;
         this.totalPopulation = 0;
@@ -85,13 +108,15 @@ class Grid{
             for (var j = 0; j < this.rows; j++) {
                 var randNum = Math.random();
                 if(randNum<pEmpty){
-                    this.population[i][j] = new GridCell(i, j, w, true, p);
+                    console.log("agent 0")
+                    this.population[i][j] = new Agent(i, j, w, 0, 0, 0, p);
                 }
                 else{
 
                     this.totalPopulation+=1;
 
                     if(Math.random()<pPop1){
+                        console.log("agent 1")
                         var thld = getRandomInt(vMinimum, vMaximum);
                         if(Math.random()<fractionAdaptive){
                             var adapt = 3;
@@ -103,6 +128,7 @@ class Grid{
                         this.population[i][j] = new Agent(i, j, w, 1, thld, adapt, p);
                     }
                     else{
+                        console.log("agent 2")
                         var thld = getRandomInt(vMinimum, vMaximum);
                         if(Math.random()<fractionAdaptive){
                             var adapt = 3;
@@ -123,6 +149,7 @@ class Grid{
     refresh(rows, cols, w, vMinimum, vMaximum, fractionAdaptive, pEmpty, pPop1){
         this.rows = rows;
         this.cols = cols;
+        this.w = w;
         this.population = new Array(this.cols);
 
         for (var i = 0; i < this.population.length; i++) {
@@ -133,7 +160,7 @@ class Grid{
             for (var j = 0; j < this.rows; j++) {
                 var randNum = Math.random();
                 if(randNum<pEmpty){
-                    this.population[i][j] = new GridCell(i, j, w, true, this.canvas);
+                    this.population[i][j] = new Agent(i, j, w, 0, 0, 0, this.canvas);
                 }
                 else{
                     if(Math.random()<pPop1){
@@ -170,7 +197,7 @@ class Grid{
 
         for (var i = 0; i < this.cols; i++) {
             for (var j = 0; j < this.rows; j++) {
-                if( !(this.population[i][j] instanceof Agent) ){
+                if( this.population[i][j].Type == 0 ){
                     emptyPlaces.push(this.population[i][j]);
                 }
             }
@@ -191,7 +218,7 @@ class Grid{
         for (var colNum=startPosX; colNum<=endPosX; colNum++) {
             for (var rowNum=startPosY; rowNum<=endPosY; rowNum++) {
                 // All the neighbors will be grid.population[rowNum][colNum]
-                if (this.population[colNum][rowNum] instanceof Agent && !(colNum==i && rowNum==j)){
+                if (this.population[colNum][rowNum].Type != 0 && !(colNum==i && rowNum==j)){
                     neighbours.push(this.population[colNum][rowNum]);
                 }
             }
@@ -201,7 +228,7 @@ class Grid{
         var OpositeNeighbours = 0;
 
         for(var index = 0; index < neighbours.length; index++){
-            if((neighbours[index] instanceof Agent) && (neighbours[index].Type == this.population[i][j].Type)){
+            if((neighbours[index].Type != 0) && (neighbours[index].Type == this.population[i][j].Type)){
                 SameNeighbours++;   
             }
         }
@@ -212,12 +239,11 @@ class Grid{
     }
 
     updateTimesMinoMajo(i,j){
-        let TotalNeighbours , SameNeighbours, OpositeNeighbours = this.countNeighbours(i, j);
+        let neighbours = this.countNeighbours(i, j);
 
-        if(this.population[i][j] instanceof Agent && TotalNeighbours>0){
+        if(this.population[i][j].Type != 0 && neighbours[0]>0){
             this.population[i][j].adaptation();
-            var percentagem = SameNeighbours/TotalNeighbours;
-
+            var percentagem = neighbours[1]/neighbours[0];
             if(percentagem >= 0.5){
                 this.population[i][j].tMinority = 0
                 this.population[i][j].tMajority += 1
@@ -229,39 +255,40 @@ class Grid{
     }
 
     replacePosition(i,j){
-        let emptyCells = this.getEmptyPlaces();
-        /**
-        * Returns a random number between min (inclusive) and max (exclusive)
-        */
-        var random_emptyCell = Math.floor(Math.random(emptyCells.length)*(emptyCells.length - 0) + 0);
+        var emptyCells = this.getEmptyPlaces();
+        var random_emptyCell = getRandomInt(0, emptyCells.length - 1);
         // console.log(emptyCells, random_emptyCell);
         
         var iEmptyCell = emptyCells[random_emptyCell].i;
         var jEmptyCell = emptyCells[random_emptyCell].j;
+        console.log(iEmptyCell, jEmptyCell);
+
+        this.population[iEmptyCell][jEmptyCell] = this.population[i][j].clone();
+        // console.log("this.population[iEmptyCell][iEmptyCell] : ", this.population[iEmptyCell][jEmptyCell])
+
+        this.population[i][j] = new Agent (i, j, this.w, 0, 0, 0, this.canvas)
+        // console.log("this.population[i][j] : ", this.population[i][j])
+
+        // this.population[i][j].changePosition(iEmptyCell, jEmptyCell);
+        // this.population[iEmptyCell][iEmptyCell].changePosition(i, j);
         
-        this.population[i][j].changePosition(iEmptyCell, jEmptyCell);
-        this.population[iEmptyCell][iEmptyCell].changePosition(i, j); 
-
-        // this.population[iEmptyCell][iEmptyCell] = this.population[i][j];
-        // this.population[i][j] = new GridCell(i, j, this.population[i][j].w, true, this.canvas);
-
         this.updateTimesMinoMajo(i,j);
     }
 
-    show(){
-        for (var i=0; i<this.cols; i++){
-            for(var j=0; j<this.rows; j++){
-                this.population[i][j].show();
-            }
-        }
-    }
+    // show(){
+    //     for (var i=0; i<this.cols; i++){
+    //         for(var j=0; j<this.rows; j++){
+    //             this.population[i][j].show();
+    //         }
+    //     }
+    // }
 
     PercetageunHappy(){
         var nUnhappy=0; 
 
         for (var i=0; i<this.cols; i++){
             for(var j=0; j<this.rows; j++){
-                if(this.countNeighbours(i, j)[1] < this.population[i][j].threshold){
+                if(this.population[i][j].Type !=0 && this.countNeighbours(i, j)[1] < this.population[i][j].threshold){
                     nUnhappy+=1
                 } 
             }
@@ -273,12 +300,17 @@ class Grid{
         for (var i=0; i<this.cols; i++){
             for(var j=0; j<this.rows; j++){
                 var neighbors = this.countNeighbours(i, j);
-                if( neighbors[1] < this.population[i][j].threshold){
+                if( this.population[i][j].Type!=0 &&  neighbors[1] < this.population[i][j].threshold){
+                    // console.log("i: ", this.population[i][j].i, i)
+                    // console.log("j: ", this.population[i][j].j, j)
+                    // console.log("type: ", this.population[i][j].Type)
+                    // console.log("threshold: ", this.population[i][j].threshold)
+                    // console.log("neighbors[1]: ", neighbors[1])
                     this.replacePosition(i,j);
                 }
             }
         }
-        this.canvas.redraw();
+        // this.canvas.redraw();
     }
 }
   
