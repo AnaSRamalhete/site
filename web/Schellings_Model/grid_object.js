@@ -72,10 +72,10 @@ class Agent {
                 this.canvas.fill(255);
                 break;
             case 1:
-                this.canvas.fill(255,0,0);
+                this.canvas.fill(142,203,157);
                 break;
             case 2:
-                this.canvas.fill(0,0,255);
+                this.canvas.fill(134,92,152);
                 break;
         }
         this.canvas.rect(this.i*this.w, this.j*this.w, this.w, this.w);
