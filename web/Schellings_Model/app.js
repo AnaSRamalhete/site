@@ -1,7 +1,7 @@
 // Variables to use on Schellings model 
 
-const cols=10;
-const rows=10;
+const cols=20;
+const rows=20;
 
 var pPopulation1 = document.getElementById("pPopulation1").value/100;   
 var pEmpty = document.getElementById("emptySpace").value/100;   
@@ -23,6 +23,7 @@ let sketch = function(p) {
     p.setup = function(){
       p.createCanvas(Math.min(sketchWidth, sketchHeight) + 1,Math.min(sketchWidth, sketchHeight)  + 1);
       grid = new Grid(rows, cols, w, minNeighbours, maxNeighbours, 0, pEmpty, pPopulation1, p);
+    //   p.noLoop();
     }
 
     p.windowResized = function(){
@@ -43,19 +44,16 @@ let sketch = function(p) {
     }
 
     p.draw = function(){
+        p.clear()
         widthSquare = sketchWidth/cols;
         heigthSquare = sketchHeight/rows;
         w = Math.min(widthSquare, heigthSquare);
 
-        // grid.show();
-        for (var i=0; i<grid.cols; i++){
-            for(var j=0; j<grid.rows; j++){
-                grid.population[i][j].show();
-            }
+        grid.show();
+        
+        if(grid.PercetageunHappy()>0.2){
+            grid.simStep();
         }
-        // if(grid.PercetageunHappy()>0.02){
-        //     grid.simStep();
-        // }
     }
 };
 
