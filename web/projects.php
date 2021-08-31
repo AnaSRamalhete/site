@@ -12,34 +12,9 @@
     <a href="Schellings_Model/index.php">
         <div class="project-slide">
             <h1>Schelling's Model of Segregation with Adaptation</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p>Computational Model proposed by Thomas Schelling to recreate patterns of segregation found in our cities. With this project I studied the effect of adding adaptation behaviour to the agents present on the grid world.</p>
         </div>
     </a>
-    <!-- <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-    </div>
-    <div class="project-slide">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> 
-    </div> -->
-    
 </section>
 
 

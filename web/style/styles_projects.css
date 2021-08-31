@@ -21,10 +21,12 @@ a{
     width: 20vw;
     height: 20vw;
     text-align: center;
+    border-radius: 20px;
+    justify-items: center;
+
     background: rgba(255, 255, 255,0.2);
     -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
-    border-radius: 20px;
 
     transition: color 0.5s linear; /* vendorless fallback */
     -o-transition: color 0.5s linear; /* opera */
@@ -34,14 +36,26 @@ a{
 }
 
 .project-slide:hover {
-    width: 25vw;
+    /* width: 25vw; */
     /* height: 25vw; */
-    transition: all 0.2s ease-in;
+    border: solid 4px rgba(85, 85, 85,0.5);
+    transform: scale(1.05);
+    transition: all 0.1s ease-in;
+
 }
 .project-slide:not(:hover){
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease-in;
+}
+.project-slide h1{
+    max-width: 19vw;
+    justify-items: center;
+    margin-bottom: 10px;
 }
 
+.project-slide p{
+    max-width: 18vw;
+    justify-items: center;
+}
 
 @media screen and (max-width:1500px){
 
