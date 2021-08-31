@@ -13,7 +13,7 @@ var sketchHeight = document.getElementById("p5Container").offsetHeight * 0.9;
 
 var widthSquare = sketchWidth/cols;
 var heigthSquare = sketchHeight/rows;
-var w = Math.min(widthSquare, heigthSquare);
+var w = Math.max(widthSquare, heigthSquare);
 
 let grid;
 
@@ -21,7 +21,8 @@ let grid;
 let sketch = function(p) {
 
     p.setup = function(){
-      p.createCanvas(Math.min(sketchWidth, sketchHeight) + 1,Math.min(sketchWidth, sketchHeight)  + 1);
+      p.createCanvas(Math.max(sketchWidth, sketchHeight) + 1,Math.max(sketchWidth, sketchHeight)  + 1);
+    //   p.createCanvas(sketchWidth+ 1,sketchWidth + 1);
       grid = new Grid(rows, cols, w, minNeighbours, maxNeighbours, 0, pEmpty, pPopulation1, p);
     //   p.noLoop();
     }
@@ -30,11 +31,11 @@ let sketch = function(p) {
         p.clear();
         sketchWidth = document.getElementById("p5Container").offsetWidth * 0.9;
         sketchHeight = document.getElementById("p5Container").offsetHeight * 0.9;
-        p.resizeCanvas(sketchWidth + 1, sketchHeight + 1);
+        p.resizeCanvas(Math.max(sketchWidth, sketchHeight) + 1,Math.max(sketchWidth, sketchHeight)  + 1);
         
         widthSquare = sketchWidth/cols;
         heigthSquare = sketchHeight/rows;
-        w = Math.min(widthSquare, heigthSquare);
+        w = Math.max(widthSquare, heigthSquare);
 
         for (var i=0; i<cols; i++){
             for(var j=0; j<rows; j++){
