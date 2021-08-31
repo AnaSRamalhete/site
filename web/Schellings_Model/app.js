@@ -63,15 +63,21 @@ new p5(sketch, 'p5Container');
 // Event Listener to refresh numbers of simulation
 
 document.getElementById("btnRefresh").addEventListener("click", function() {
+    
     pPopulation1 = document.getElementById("pPopulation1").value/100;   
     pEmpty = document.getElementById("emptySpace").value/100;   
     minNeighbours = document.getElementById("minSameNeighbours").value;   
     maxNeighbours = document.getElementById("maxSameNeighbours").value; 
 
-    console.log(pPopulation1)
-    console.log(pEmpty)
-    console.log(minNeighbours)
-    console.log(maxNeighbours)
+    grid.canvas.clear();
+
+    sketchWidth = document.getElementById("p5Container").offsetWidth * 0.9;
+    sketchHeight = document.getElementById("p5Container").offsetHeight * 0.9;
+    widthSquare = sketchWidth/cols;
+    heigthSquare = sketchHeight/rows;
+    w = Math.max(widthSquare, heigthSquare);
+
+    grid.canvas.resizeCanvas(Math.max(sketchWidth, sketchHeight) + 1,Math.max(sketchWidth, sketchHeight)  + 1);
 
     grid.refresh(rows, cols, w, minNeighbours, maxNeighbours, 0, pEmpty, pPopulation1);
 }); 
