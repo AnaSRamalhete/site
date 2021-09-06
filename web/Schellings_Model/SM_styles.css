@@ -1,13 +1,23 @@
+*{
+  color: rgb(46, 45, 49);;
+}
+
 /* -------------- NavBar Section ----------------  */
 .nav-bar{
-    height: fit-content;
+    height: 100px;
     width: 100%;
     padding: 15px;
     display: flex;
-    background-color: rgb(133, 132, 132);
+    background-color: rgb(46, 45, 49);
+    /* background-color: black; */
+    /* background-image: linear-gradient(to top,rgba(134,92,152,0.5),rgba(142,203,157,0.5)); */
     justify-content: space-around;
     align-items: center;
     color: white;
+}
+
+.nav-bar h1{
+  color: white;
 }
 
 .code-btn{
@@ -19,7 +29,6 @@
     padding: 10px;
     justify-content: space-between;
     align-items: center;
-    color: black;
 }
 
 .code-btn i {
@@ -32,6 +41,37 @@
 }
 
 /* -------------- Main Section ----------------  */
+
+/* ----- Introduction ------ */
+
+.introduction{
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  flex-direction: column;
+  /* background-color: rgba(133, 132, 132,0.5); */
+  background-image: linear-gradient(to top,rgba(134,92,152,0.5),rgba(142,203,157,0.5));
+  border-radius: 25px;
+}
+/* .introduction h1{
+  margin-top: 10px;
+  margin-left: 50px; 
+} */
+.introduction p{
+  max-width: 90%;
+  margin: 10px;
+  margin-left: 20px;
+}
+.introduction ul{
+  margin-left: 50px;
+  max-width: 80%;
+}
+
+.introduction li{
+  margin-top:10px;  
+}
+
+/* ----- Main Hero ------ */
 
 .main-hero{
     /* height: fit-content; */
@@ -89,14 +129,16 @@
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #5a87ac;
+    /* background: #5a87ac; */
+    background: rgb(46, 45, 49);
     cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
     width: 25px;
     height: 25px;
-    background: #7482a0;
+    /* background: #7482a0; */
+    background: rgb(46, 45, 49);
     cursor: pointer;
   }
 
