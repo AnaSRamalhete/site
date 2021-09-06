@@ -65,21 +65,6 @@
 
         <div class="var-section">
 
-            <div class="legend">
-                <div class="GridCell_legend">
-                    <div id="square-1"></div>
-                    <p> Agent of type 1</p>
-                </div>
-                <div class="GridCell_legend">
-                    <div id="square-2"></div>
-                    <p> Agent of type 2</p>
-                </div>
-                <div class="GridCell_legend">
-                    <div id="square-empty"></div>
-                    <p> Empty grid cell</p>
-                </div>
-            </div>
-
             <div class="slideContainer">
                 <h3>% of Population 1</h3>
                 <input type="range" min="1" max="100" value="50" id="pPopulation1" class="slider">
@@ -104,6 +89,22 @@
             <div class="btn-refresh" id="btnRefresh">
                 <h3>Refresh</h3>
             </div>
+
+            <div class="legend">
+                <div class="GridCell_legend">
+                    <div id="square-1"></div>
+                    <p> Agent of type 1</p>
+                </div>
+                <div class="GridCell_legend">
+                    <div id="square-2"></div>
+                    <p> Agent of type 2</p>
+                </div>
+                <div class="GridCell_legend">
+                    <div id="square-empty"></div>
+                    <p> Empty grid cell</p>
+                </div>
+            </div>
+            
         </div>
 
         <!-- ----------------- -->
