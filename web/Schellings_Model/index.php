@@ -41,11 +41,11 @@
     <div class="introduction">
         <h1>About the Schelling Model of Segregation</h1>
 
-        <p>In 1969 Thomas Schelling suggested a simple simulation based on individual’s discriminatory behaviour that reflected segregation patterns.</p>
-        <p>The grid is set up by randomly placing agents of type 1 and 2, some cells are left empty. 
+        <p>In 1969 Thomas Schelling suggested a simple simulation based on individual’s discriminatory behaviour to recreat segregation patterns found in our society.</p>
+        <p>The simulation consists of a grid which is set up by randomly placing agents of type 1 and 2 with some cells left empty. 
             At each time step of the simulation, agents dissatisfied with their neighbourhood are repositioned to a random empty place on the grid. 
-            In this project the neighbourhood of an agent is considered to be the first nearest squares around it - Moore neighbourhood.</p>
-        <p>Each agent has a given threshold (number between 1and 8), which represents the number of equal neighbors it needs to be happy with its neighbourhood.</p>
+            In this project the neighbourhood of an agent is considered to be its first nearest squares around it - Moore neighbourhood.</p>
+        <p>Each agent has a given threshold (number between 1 and 8), which represents the number of equal neighbors it needs to be happy with its neighbourhood.</p>
         
         <h1>Introducing Adaptive Agents</h1>
         
