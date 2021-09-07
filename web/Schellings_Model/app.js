@@ -1,19 +1,27 @@
-// Variables to use on Schellings model 
-
-const cols=50;
-const rows=50;
+// --------------------------------
+// Objects for the display of parameters
+// --------------------------------
 
 var valuepPop1 = document.getElementById("valuepPop1");
 var valuepEmpty = document.getElementById("valuepEmpty");
 var valueminN = document.getElementById("valueminN");
 var valuemaxN = document.getElementById("valuemaxN");
 
+// --------------------------------
+// Variables to use on Schellings model 
+// --------------------------------
+
+const cols=50;
+const rows=50;
+
 var pPopulation1 = document.getElementById("pPopulation1").value/100;   
 var pEmpty = document.getElementById("emptySpace").value/100;   
 var minNeighbours = document.getElementById("minSameNeighbours").value;   
 var maxNeighbours = document.getElementById("maxSameNeighbours").value; 
 
+// --------------------------------
 // Display Values
+// --------------------------------
 
 valuepPop1.innerHTML = pPopulation1*100 + '%';
 valuepEmpty.innerHTML = pEmpty*100 + '%';
@@ -37,6 +45,10 @@ document.getElementById("minSameNeighbours").oninput = function(){
 document.getElementById("maxSameNeighbours").oninput = function(){
     valuemaxN.innerHTML = this.value;
 }
+// --------------------------------
+// For the display of the Grid:
+// --------------------------------
+
 
 var sketchWidth = document.getElementById("p5Container").offsetWidth * 0.9;
 var sketchHeight = document.getElementById("p5Container").offsetHeight * 0.9;
