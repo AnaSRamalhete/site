@@ -66,22 +66,22 @@
         <div class="var-section">
 
             <div class="slideContainer">
-                <h3>% of Population 1</h3>
+                <h3>% of Population 1:  <span id="valuepPop1"></span></h3>
                 <input type="range" min="1" max="100" value="50" id="pPopulation1" class="slider">
             </div>
 
             <div class="slideContainer">
-                <h3>% of Empty Spaces</h3>
+                <h3>% of Empty Spaces:  <span id="valuepEmpty"></span></h3>
                 <input type="range" min="1" max="100" value="10" id="emptySpace" class="slider">
             </div>
 
             <div class="slideContainer">
-                <h3>Min nº of desired equal Neighbours</h3>
+                <h3>Min nº of desired equal Neighbours:  <span id="valueminN"></span></h3>
                 <input type="range" min="1" max="8" value="3" id="minSameNeighbours" class="slider">
             </div>
 
             <div class="slideContainer">
-                <h3>Max nº of desired equal Neighbours</h3>
+                <h3>Max nº of desired equal Neighbours: <span id="valuemaxN"></span></h3>
                 <input type="range" min="1" max="8" value="6" id="maxSameNeighbours" class="slider">
             </div>
             
